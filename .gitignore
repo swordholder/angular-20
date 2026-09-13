@@ -2,3 +2,4 @@
 Backend/src/bin
 Backend/src/obj
 .vs
+Frontend/.vscode

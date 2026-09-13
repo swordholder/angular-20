@@ -1,0 +1,25 @@
+<main style="padding: 2rem; font-family: system-ui, sans-serif;">
+  <h1>Angular + .NET Integration</h1>
+
+  <!-- Loading State -->
+  @if (loading()) {
+    <p>Connecting to .NET backend...</p>
+  }
+
+  <!-- Error State -->
+  @if (errorMessage()) {
+    <p style="color: red;"><strong>Error:</strong> {{ errorMessage() }}</p>
+  }
+
+  <!-- Success State -->
+  @if (apiMessage()) {
+    <div style="background-color: #e6f4ea; border: 1px solid #34a853; padding: 1rem; border-radius: 8px;">
+      <h2>Response from API:</h2>
+      <p style="font-size: 1.25rem; font-weight: bold;">{{ apiMessage() }}</p>
+    </div>
+  }
+
+  <button (click)="fetchMessage()" style="margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer;">
+    Refresh Message
+  </button>
+</main>
