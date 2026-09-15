@@ -25,6 +25,14 @@ export class App implements OnInit {
     this.fetchMessage();
   }
 
+  setError(): void{
+    this.errorMessage.set('Manual error is set');
+  }
+
+  celarError(): void{
+    this.errorMessage.set('');
+  }
+
   fetchMessage(): void {
     this.loading.set(true);
     this.errorMessage.set('');
